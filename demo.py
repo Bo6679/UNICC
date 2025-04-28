@@ -7,13 +7,13 @@ st.set_page_config(page_title="UNICC Media Analysis Tool", layout="wide")
 st.title("🧠 UNICC AI Media Analysis Tool")
 st.markdown("Upload media content and detect xenophobic language, misinformation, or harmful narratives in text, audio, and video.")
 
-# Sidebar for upload
+#Sidebar for upload
 st.sidebar.title("📁 Upload Your File")
 file_type = st.sidebar.radio("Choose Media Type:", ["Text", "Audio", "Video"])
 
 uploaded_file = st.sidebar.file_uploader("Upload File", type=["txt", "mp3", "wav", "mp4"])
 
-# Chat-style Interaction Placeholder
+#Interaction Placeholder
 st.subheader("💬 Interactive Analysis Panel")
 with st.expander("🧪 Try asking:"):
     st.markdown("- *Is there any xenophobic language?*")
@@ -21,7 +21,7 @@ with st.expander("🧪 Try asking:"):
 
 user_prompt = st.text_input("Ask a question about your uploaded content:")
 
-# Simulate response
+#Simulate response
 if st.button("Analyze"):
     if uploaded_file is None:
         st.warning("Please upload a file first.")
